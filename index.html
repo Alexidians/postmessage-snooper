@@ -11,9 +11,11 @@
         console.debug(data.name)
         console.debug("e:")
         console.debug(e)
+        console.debug("e.origin:")
+        console.debug(e.origin)
         console.debug("}")
         var log = document.createElement("p")
-        log.innerHTML = "data: " + data + " data.name: " + data.name + " e: " + e
+        log.innerHTML = "data: " + data + " data.name: " + data.name + " e: " + e + " e.origin: " + e.origin
         document.getElementById("log").appendChild(log)
     })
 </script>
