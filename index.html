@@ -1,0 +1,19 @@
+<h1>PostMessage() Snooper</h1>
+<div id="log">
+</div>
+<script>
+    window.addEventListener("message", function (e) {
+        const data = JSON.parse(e.data)
+        console.debug("PostMessage() {")
+        console.debug("data:")
+        console.debug(data)
+        console.debug("data.name:")
+        console.debug(data.name)
+        console.debug("e:")
+        console.debug(e)
+        console.debug("}")
+        var log = document.createElement("p")
+        log.innerHTML = "data: " + data + " data.name: " + data.name + " e: " + e
+        document.getElementById("log").appendChild(log)
+    })
+</script>
